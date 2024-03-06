@@ -4,34 +4,24 @@ const express = require("express")
 const app = express()
 
 //middleware
-//it always works before every route
-// the next(); function give the request a push from the middleware bucket
 
 app.use(function (req, res, next) {
-    console.log("hello from middleware");
+    console.log("middleware before home page route");
     next();
 });
-
-// we  can make n number of middlewares
-
-app.use(function (req, res, next) {
-    console.log("hello from middleware 2");
-    next();
-});
-
-
-//app.get(route,function)
-//here get is the GET Route,
-//route is the actual route, here route is '/'
-//req is request
-//res is response
 
 app.get('/', function (req,res) {
-    res.send('Site accessed');
+    res.sendFile('views/test.html', {root: __dirname })
 });
 
-app.get('/profile', function (req, res) {
-    res.send('Hello from the profile route');
+app.use(function (req, res, next) {
+    console.log("middleware 2 before contact page route");
+    next();
+});
+
+
+app.get('/contact', function (req, res) {
+    res.send('Hello from the contact route');
 });
 app.listen(3000)
 
