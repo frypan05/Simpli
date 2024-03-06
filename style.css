@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f6;
+}
+
+.navbar{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    margin-left: 40px;
+    margin-right: 80px;
+}
+.logo{
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 4rem;
+    
+}
