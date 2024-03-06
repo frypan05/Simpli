@@ -10,7 +10,7 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/', function (req,res) {
+app.get('/home', function (req,res) {
     res.sendFile('index.html', {root: __dirname })
 });
 
@@ -24,11 +24,11 @@ app.get('/Contact', function (req, res) {
 });
 
 app.get('/About', function (req, res) {
-    res.sendFile('views/test.html', {root: __dirname })
+    res.sendFile('index.html', {root: __dirname })
 });
 
 app.get('/Services', function (req, res) {
-    res.sendFile('views/test.html', {root: __dirname })
+    res.sendFile('index.html', {root: __dirname })
 });
 app.listen(3000)
 
