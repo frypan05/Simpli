@@ -145,3 +145,19 @@ const inputChars = document.querySelector("#input-chars");
 inputTextElem.addEventListener("input", (e) => {
   inputChars.innerHTML = inputTextElem.value.length;
 });
+const startRecognitionButton = document.getElementById('start-recognition');
+        const transcriptionDiv = document.getElementById('input-text');
+        
+        const recognition = new webkitSpeechRecognition(); // Initialize speech recognition
+        
+        recognition.lang = 'en-US'; // Set language to English (US)
+        recognition.continuous = true; // Continuous recognition
+        
+        recognition.onresult = function(event) {
+            const transcript = event.results[event.results.length - 1][0].transcript;
+            transcriptionDiv.innerHTML = `${transcript}`;
+        };
+
+        startRecognitionButton.addEventListener('click', function() {
+            recognition.start();
+        });
