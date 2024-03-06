@@ -19,9 +19,12 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.get('/Contact', function (req, res) {
+    res.sendFile('views/test.html', {root: __dirname })
+});
 
-app.get('/contact', function (req, res) {
-    res.send('Hello from the contact route');
+app.get('/About', function (req, res) {
+    res.sendFile('views/test.html', {root: __dirname })
 });
 app.listen(3000)
 
