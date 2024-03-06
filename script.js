@@ -27,7 +27,7 @@ app.use(function (req, res, next) {
 //res is response
 
 app.get('/', function (req,res) {
-    res.send('Hello World hi hi');
+    res.send('Site accessed');
 });
 
 app.get('/profile', function (req, res) {
