@@ -13,15 +13,47 @@ header {
     width: 100%;
     z-index: 1000;
 }
-
+.navbar{
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: Arial;
+        box-sizing:border-box;
+    }
+    body{
+        font-family: 'Roboto', sans-serif;
+        background-color: #f1f3f6;
+    }
+    
+    .navbar{
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        gap: 10rem;
+        
+        margin-right: 80px;
+    }
+    .logo{
+        display: flex;
+        gap: 2 rem;
+    }
+    .nav-section{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 4rem;
+        
+    }
+}
 .logo {
-    float: left;
-    margin-left: 20px;
+    float: right;
+    margin-left: 0;
 }
 
 .logo img {
     width: 100px;
-    height: auto;
+    height:auto;
 }
 
 nav {
