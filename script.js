@@ -12,6 +12,7 @@ app.use(function (req, res, next) {
 
 app.get('/home', function (req,res) {
     res.sendFile('index.html', {root: __dirname })
+    res.sendFile('styles.css', {root: __dirname })
 });
 
 app.use(function (req, res, next) {
@@ -21,6 +22,7 @@ app.use(function (req, res, next) {
 
 app.get('/Contact', function (req, res) {
     res.sendFile('index.html', {root: __dirname })
+    res.sendFile('ConUs.css', {root: __dirname })
 });
 
 app.get('/About', function (req, res) {
