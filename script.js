@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
 });
 
 app.get('/Contact', function (req, res) {
-    res.sendFile('index.html', {root: __dirname })
+    res.sendFile('ContactUs.html', {root: __dirname })
     res.sendFile('ConUs.css', {root: __dirname })
 });
 
