@@ -1,1 +1,1 @@
- how are you?
+The goal is to develop a language translator tool tailored for government organizations, providing the capability to translate English content into a specific language. This tool is designed to enhance accessibility and usability for a wider audience.
