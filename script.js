@@ -11,7 +11,7 @@ app.use(function (req, res, next) {
 });
 
 app.get('/', function (req,res) {
-    res.sendFile('views/test.html', {root: __dirname })
+    res.sendFile('index.html', {root: __dirname })
 });
 
 app.use(function (req, res, next) {
@@ -20,10 +20,14 @@ app.use(function (req, res, next) {
 });
 
 app.get('/Contact', function (req, res) {
-    res.sendFile('views/test.html', {root: __dirname })
+    res.sendFile('index.html', {root: __dirname })
 });
 
 app.get('/About', function (req, res) {
+    res.sendFile('views/test.html', {root: __dirname })
+});
+
+app.get('/Services', function (req, res) {
     res.sendFile('views/test.html', {root: __dirname })
 });
 app.listen(3000)
