@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pdf To Text</title>
+</head>
+<body>
+    
+    <input type="file",id="ipfile">
+    <button type="button" id="btn-upload">upload</button>
+    <br>
+    <br>
+
+    <textarea  id="resultext" style="width:300;height: 150;" placeholder="your paragraph"></textarea>
+    <script>
+        const inpfile = document.getElementById("inpfile");
+        const btnUpload = document.getElementById("btnUpload");
+        const resultText = document.getElementById("resultText");
+        btnUpload.addEventListener("click", () => {
+            const formdata = new FormData();
+            formdata.append("pdfFile",inpfile.files[0]);
+            fetch("/extract-text", {
+                method: "post",
+                body:formdata
+            }).then(response =>{
+                return response.text();
+            }).then(extractedText =>{
+                resultText.value = extractedText;
+            })
+        });
+    </script>
+</body>
+</html>
