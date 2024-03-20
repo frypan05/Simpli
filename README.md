@@ -1,4 +1,4 @@
 # Innohacks
-Natural Language Processing Translation System.
+Natural Language Processing System.
 
 - all the commits are added to this branch.
