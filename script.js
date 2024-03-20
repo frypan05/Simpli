@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const server = http.createServer((req, res) => {
-    if (req.url === '/home' || req.url === 'index.html') {
+    if (req.url === '/' || req.url === 'index.html') {
         // Load the HTML file
         fs.readFile(path.join(__dirname, '/index.html'), (err, data) => {
             if (err) {
